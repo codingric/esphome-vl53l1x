@@ -115,8 +115,8 @@ static const uint16_t FIRMWARE__SYSTEM_STATUS                                   
 static const uint16_t IDENTIFICATION__MODEL_ID                                            = 0x010F;
 
 static const uint16_t BOOT_TIMEOUT     = 120;
-static const uint16_t TIMING_BUDGET    = 500;                          // timing budget is maximum allowable = 500 ms
-static const uint16_t RANGING_FINISHED = (TIMING_BUDGET * 115) / 100;  // add 15% extra to timing budget to ensure ranging is finished
+static const uint16_t TIMING_BUDGET    = 250;                          // timing budget is maximum allowable = 500 ms
+static const uint16_t RANGING_FINISHED = TIMING_BUDGET;  // add 15% extra to timing budget to ensure ranging is finished
 
 // Sensor Initialisation
 void VL53L1XComponent::setup() {
